@@ -118,23 +118,25 @@ html, body {
   font-style: italic;
 }
 
-/* Tables */
+/* Tables — LaTeX booktabs style */
 .slidev-layout table {
-  width: 100%;
+  width: var(--table-width, 100%);
   border-collapse: collapse;
-  margin: 1em 0;
+  margin: 1em auto;
+  border-top: 1.5px solid var(--auriga-fg);       /* \toprule */
+  border-bottom: 1.5px solid var(--auriga-fg);     /* \bottomrule */
 }
 
 .slidev-layout th {
   font-family: 'Roboto', 'Lato', sans-serif;
   font-weight: 700;
-  text-align: left;
-  border-bottom: 2px solid var(--auriga-dark-gray);
+  text-align: var(--table-align, left);
+  border-bottom: 0.8px solid var(--auriga-dark-gray); /* \midrule */
   padding: 0.5em 0.75em;
 }
 
 .slidev-layout td {
-  border-bottom: 1px solid var(--auriga-light-gray);
+  text-align: var(--table-align, left);
   padding: 0.4em 0.75em;
 }
 

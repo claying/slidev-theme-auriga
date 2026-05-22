@@ -1,16 +1,6 @@
 <template>
   <div class="slidev-layout auriga-cover">
     <div class="cover-content">
-      <!-- Logos -->
-      <div v-if="logos && logos.length" class="cover-logos">
-        <img
-          v-for="(logo, i) in logos"
-          :key="i"
-          :src="logo"
-          class="cover-logo"
-        />
-      </div>
-
       <!-- Title / subtitle from slot -->
       <slot />
 
@@ -38,6 +28,15 @@
       <!-- Date -->
       <div v-if="date" class="cover-date">
         {{ date }}
+      </div>
+      <!-- Logos -->
+      <div v-if="logos && logos.length" class="cover-logos">
+        <img
+          v-for="(logo, i) in logos"
+          :key="i"
+          :src="logo"
+          class="cover-logo"
+        />
       </div>
     </div>
   </div>
@@ -91,8 +90,9 @@ const institutions = computed(() => {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2em;
-  margin-bottom: 1.5em;
+  gap: 5em;
+  margin-bottom: 0em;
+  padding-top: 4em;
 }
 
 .cover-logo {

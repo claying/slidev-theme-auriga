@@ -1,7 +1,7 @@
 <template>
-  <div class="auriga-block" :class="{ 'has-title': !!title }" :style="blockStyle">
-    <div v-if="title" class="block-title" :style="titleStyle">
-      {{ title }}
+  <div class="auriga-block" :style="blockStyle">
+    <div v-if="title" class="block-header">
+      <span class="block-label" :style="{ color: color }">{{ title }}</span>
     </div>
     <div class="block-content">
       <slot />
@@ -31,42 +31,27 @@ const typeColors: Record<string, string> = {
 
 const color = computed(() => typeColors[props.type] ?? typeColors.default)
 
-const blockStyle = computed(() =>
-  props.title
-    ? { '--block-color': color.value } as Record<string, string>
-    : { borderLeft: `3px solid ${color.value}`, backgroundColor: `${color.value}0a` }
-)
-
-const titleStyle = computed(() => ({
-  backgroundColor: color.value,
+const blockStyle = computed(() => ({
+  borderLeftColor: color.value,
+  backgroundColor: `${color.value}14`,
 }))
 </script>
 
 <style scoped>
 .auriga-block {
-  border-radius: 4px;
-  overflow: hidden;
+  border-left: 3px solid;
+  border-radius: 2px;
   margin: 1em 0;
-}
-
-.auriga-block.has-title {
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
-}
-
-.block-title {
-  font-family: 'Roboto', 'Lato', sans-serif;
-  font-weight: 700;
-  font-size: 0.9em;
-  color: #ffffff;
-  padding: 0.45em 1em;
-}
-
-.block-content {
   padding: 0.8em 1em;
 }
 
-.auriga-block.has-title .block-content {
-  border-left: 3px solid var(--block-color);
+.block-header {
+  font-family: 'Roboto', 'Lato', sans-serif;
+  margin-bottom: 0.4em;
+}
+
+.block-label {
+  font-weight: 700;
 }
 
 .block-content :deep(p) {

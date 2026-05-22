@@ -51,6 +51,28 @@ A new chapter begins here
 Regular text, **bold text**, *italic text*, and `monospace code`.
 
 ---
+
+# Table Example
+
+| Method    | Accuracy | Parameters |
+|-----------|----------|------------|
+| ResNet-50 | 76.1%    | 25.6M     |
+| ViT-B/16  | 77.9%    | 86.6M     |
+| DeiT-Base | 81.8%    | 86.6M     |
+| Swin-T    | 81.3%    | 28.3M     |
+
+Custom width and centered alignment with `--table-width` and `--table-align`:
+
+<div style="--table-width: 60%; --table-align: center">
+
+| Metric   | Value |
+|----------|-------|
+| Recall   | 92.3% |
+| F1 Score | 89.7% |
+
+</div>
+
+---
 layout: two-cols
 ---
 
