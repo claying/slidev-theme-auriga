@@ -84,7 +84,7 @@ const institutions = computed(() => {
 
 .cover-content {
   text-align: left;
-  max-width: 85%;
+  max-width: 100%;
 }
 
 .cover-logos {
