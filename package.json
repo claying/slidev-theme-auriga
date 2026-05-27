@@ -28,5 +28,8 @@
   },
   "devDependencies": {
     "@slidev/cli": "^0.50.0"
+  },
+  "dependencies": {
+    "@slidev/theme-default": "^0.25.0"
   }
 }

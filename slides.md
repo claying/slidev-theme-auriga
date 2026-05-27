@@ -3,16 +3,16 @@ theme: ./
 layout: cover
 authors:
   - name: Alice Smith
-    institution: MIT CSAIL
+    institution: Max Planck Institute
   - name: Bob Jones
-    institution: Stanford University
+    institution: ETH Zürich
 date: "February 2026"
 bib: /example.bib
 ---
 
 # Auriga Theme for Slidev
 
-A minimalist presentation theme inspired by the Auriga LaTeX Beamer theme
+**A minimalist presentation theme inspired by the Auriga LaTeX Beamer theme**
 
 ---
 
@@ -63,7 +63,7 @@ Regular text, **bold text**, *italic text*, and `monospace code`.
 
 Custom width and centered alignment with `--table-width` and `--table-align`:
 
-<div style="--table-width: 60%; --table-align: center">
+<div style="--table-width: 40%; --table-align: center">
 
 | Metric   | Value |
 |----------|-------|

@@ -219,13 +219,13 @@ The cover layout accepts frontmatter for authors, institutions, date, and logos:
 layout: cover
 authors:
   - name: Alice Smith
-    institution: MIT CSAIL
+    institution: Max Planck Institute
   - name: Bob Jones
-    institution: Stanford University
+    institution: ETH Zürich
 date: "February 2026"
 logos:
-  - /mit-logo.png
-  - /stanford-logo.png
+  - /mpi_logo.png
+  - /eth_logo.png
 bib: /example.bib
 ---
 

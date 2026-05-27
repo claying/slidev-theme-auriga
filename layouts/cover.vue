@@ -2,7 +2,9 @@
   <div class="slidev-layout auriga-cover">
     <div class="cover-content">
       <!-- Title / subtitle from slot -->
+      <div class="text-left pl-4 border-l-6 border-gray-400">
       <slot />
+      </div>
 
       <!-- Authors -->
       <div v-if="resolvedAuthors.length" class="cover-authors">
@@ -75,21 +77,19 @@ const institutions = computed(() => {
 .auriga-cover {
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 40px 60px;
+  padding: 40px 120px;
   background: var(--auriga-bg);
   height: 100%;
 }
 
 .cover-content {
-  text-align: center;
+  text-align: left;
   max-width: 85%;
 }
 
 .cover-logos {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 5em;
   margin-bottom: 0em;
   padding-top: 4em;
