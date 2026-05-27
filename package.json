@@ -1,6 +1,6 @@
 {
   "name": "slidev-theme-auriga",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A minimalist Slidev theme inspired by the Auriga LaTeX Beamer theme, featuring academic components such as theorem blocks, BibTeX citations, footnotes, and paginated references",
   "license": "MIT",
   "keywords": [
